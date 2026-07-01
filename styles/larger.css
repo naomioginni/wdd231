@@ -1,0 +1,90 @@
+/* =========================================================
+   larger.css — large-screen overrides via media query
+   ========================================================= */
+
+@media screen and (min-width: 700px) {
+
+  .header-inner {
+    padding: 1rem 1.5rem;
+  }
+
+  .site-name {
+    font-size: 1.3rem;
+  }
+
+  /* Hide hamburger, show horizontal flex nav */
+  .hamburger {
+    display: none;
+  }
+
+  .primary-nav {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    background-color: transparent;
+    border-top: none;
+  }
+
+  .primary-nav ul {
+    flex-direction: row;
+    padding: 0;
+    gap: 1.75rem;
+  }
+
+  .primary-nav a {
+    border-bottom: none;
+    padding: 0.4rem 0.1rem;
+  }
+
+  /* Wayfinding underline-grow hover effect */
+  .primary-nav a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: var(--accent);
+    transition: width 0.2s ease;
+  }
+
+  .primary-nav a:hover::after,
+  .primary-nav a:focus-visible::after,
+  .primary-nav a.active::after {
+    width: 100%;
+  }
+
+  main {
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  main > h1 {
+    font-size: 2.6rem;
+  }
+
+  /* Two-column welcome layout */
+  .welcome-grid {
+    grid-template-columns: 240px 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .profile-photo {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* Course cards in a responsive grid, not single column */
+  .course-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .goals {
+    max-width: 70ch;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .course-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
