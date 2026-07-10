@@ -208,16 +208,6 @@ main > h1 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
 }
-.member-card {
-  position: relative;
-  background-color: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
 
 .list-view .member-card {
   flex-direction: row;

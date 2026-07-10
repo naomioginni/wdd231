@@ -3,12 +3,11 @@
    Lagos Chamber of Commerce
    ========================================================= */
 
-@media screen and (min-width: 700px) {
-
-  .header-inner {
-    padding: 1rem 1.5rem;
+@media screen and (min-width: 1000px) {
+  .member-container.grid-view {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-
+}
   .site-name {
     font-size: 1.1rem;
   }
@@ -76,8 +75,4 @@
 }
 
 
-@media screen and (min-width: 1000px) {
-  .member-container.grid-view {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
+
