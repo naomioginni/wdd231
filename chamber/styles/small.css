@@ -22,11 +22,10 @@
   --max-width: 1100px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.5;
   font-family: var(--font-body);
   color: var(--danfo-black);
   background-color: var(--sand);
@@ -38,6 +37,7 @@ img {
 }
 
 h1, h2 {
+  margin: 0;
   font-family: var(--font-display);
   font-weight: 700;
 }
@@ -239,7 +239,6 @@ main > h1 {
   flex-direction: column;
   gap: 0.5rem;
 }
-
 
 .member-info {
   flex: 1;
