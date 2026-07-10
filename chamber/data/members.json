@@ -1,0 +1,84 @@
+{
+  "members": [
+    {
+      "name": "Adire House Lagos",
+      "address": "14 Balogun Street, Lagos Island, Lagos",
+      "phone": "+234 803 111 2233",
+      "website": "https://www.adirehouselagos.example.com",
+      "image": "adire-house.webp",
+      "membership": 3,
+      "category": "Textiles & Fashion",
+      "founded": 2015
+    },
+    {
+      "name": "Lekki Lagoon Logistics",
+      "address": "Plot 22 Admiralty Way, Lekki Phase 1, Lagos",
+      "phone": "+234 802 445 9021",
+      "website": "https://www.lekkilagoonlogistics.example.com",
+      "image": "lekki-logistics.webp",
+      "membership": 2,
+      "category": "Logistics & Freight",
+      "founded": 2018
+    },
+    {
+      "name": "Yaba Code Collective",
+      "address": "9 Herbert Macaulay Way, Yaba, Lagos",
+      "phone": "+234 701 998 6614",
+      "website": "https://www.yabacodecollective.example.com",
+      "image": "yaba-code.webp",
+      "membership": 3,
+      "category": "Technology & Startups",
+      "founded": 2019
+    },
+    {
+      "name": "Eko Bank & Trust",
+      "address": "5 Marina Road, Lagos Island, Lagos",
+      "phone": "+234 809 220 7745",
+      "website": "https://www.ekobanktrust.example.com",
+      "image": "eko-bank.webp",
+      "membership": 3,
+      "category": "Financial Services",
+      "founded": 2002
+    },
+    {
+      "name": "Surulere Suya Kitchen",
+      "address": "31 Adeniran Ogunsanya St, Surulere, Lagos",
+      "phone": "+234 706 340 1187",
+      "website": "https://www.surulerekitchen.example.com",
+      "image": "surulere-suya.webp",
+      "membership": 1,
+      "category": "Restaurants & Catering",
+      "founded": 2020
+    },
+    {
+      "name": "Victoria Island Realty Group",
+      "address": "17 Ademola Adetokunbo St, VI, Lagos",
+      "phone": "+234 811 662 5590",
+      "website": "https://www.virealtygroup.example.com",
+      "image": "vi-realty.webp",
+      "membership": 2,
+      "category": "Real Estate",
+      "founded": 2011
+    },
+    {
+      "name": "Ikeja Craft Artisans",
+      "address": "63 Allen Avenue, Ikeja, Lagos",
+      "phone": "+234 815 774 3302",
+      "website": "https://www.ikejacraftartisans.example.com",
+      "image": "ikeja-craft.webp",
+      "membership": 1,
+      "category": "Arts & Crafts",
+      "founded": 2017
+    },
+    {
+      "name": "Apapa Freight & Marine",
+      "address": "2 Wharf Road, Apapa, Lagos",
+      "phone": "+234 807 556 4471",
+      "website": "https://www.apapafreightmarine.example.com",
+      "image": "apapa-freight.webp",
+      "membership": 2,
+      "category": "Shipping & Marine",
+      "founded": 2008
+    }
+  ]
+}

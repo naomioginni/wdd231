@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Member Directory | Lagos Chamber of Commerce</title>
+  <meta name="description" content="Browse verified member businesses of the Lagos Chamber of Commerce, from Lagos Island to Lekki, Yaba, and beyond.">
+  <meta name="author" content="Naomi Oginni">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Member Directory | Lagos Chamber of Commerce">
+  <meta property="og:description" content="Browse verified member businesses of the Lagos Chamber of Commerce, from Lagos Island to Lekki, Yaba, and beyond.">
+  <meta property="og:image" content="https://naomioginni.github.io/wdd231/chamber/images/og-directory.webp">
+  <meta property="og:url" content="https://naomioginni.github.io/wdd231/chamber/directory.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Work+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/members.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="images/favicon.svg" alt="" class="logo" width="36" height="36">
+        <span class="site-name">Lagos Chamber<br><small>of Commerce</small></span>
+      </a>
+      <button id="menuToggle" class="hamburger" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav id="primaryNav" class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" class="active" aria-current="page">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Member Directory</h1>
+
+    <div class="directory-controls">
+      <p class="member-count"><span id="memberCount">0</span> member businesses</p>
+      <div class="view-toggle" role="group" aria-label="Choose directory view">
+        <button id="gridViewBtn" class="view-btn active" aria-pressed="true" aria-label="Grid view">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M4 4h7v7H4V4zm9 0h7v7h-7V4zM4 13h7v7H4v-7zm9 0h7v7h-7v-7z"/></svg>
+        </button>
+        <button id="listViewBtn" class="view-btn" aria-pressed="false" aria-label="List view">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M4 5h16v2H4V5zm0 6h16v2H4v-2zm0 6h16v2H4v-2z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <section aria-labelledby="member-list-heading">
+      <h2 id="member-list-heading" class="visually-hidden">Member Businesses</h2>
+      <div id="memberContainer" class="member-container grid-view">
+        <!-- Member cards injected by scripts/members.js -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <p class="footer-heading">Lagos Chamber of Commerce</p>
+        <address>
+          12 Marina Business District<br>
+          Lagos Island, Lagos, Nigeria
+        </address>
+        <p><a href="tel:+2348001234567">+234 800 123 4567</a></p>
+        <p><a href="mailto:info@lagoschamber.example.com">info@lagoschamber.example.com</a></p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Site Info</p>
+        <p>Naomi Oginni</p>
+        <p>WDD 231 &mdash; Web Frontend Development I</p>
+        <p id="lastModified"></p>
+        <p>&copy; <span id="currentYear"></span> Lagos Chamber of Commerce</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
