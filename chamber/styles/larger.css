@@ -73,6 +73,55 @@
     grid-template-columns: 1fr 1fr;
     padding: 2rem 1.5rem;
   }
+
+  /* ---------- Hero ---------- */
+  .hero-image {
+    height: 420px;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    margin: 0;
+    max-width: 480px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+
+  /* ---------- Events ---------- */
+  .events-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* ---------- Weather ---------- */
+  .weather-panel {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+  }
+
+  .weather-current {
+    text-align: left;
+  }
+
+  .forecast-list {
+    border-top: none;
+    padding-top: 0;
+    gap: 1.5rem;
+  }
+
+  /* ---------- Spotlights ---------- */
+  .spotlight-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media screen and (min-width: 1000px) {

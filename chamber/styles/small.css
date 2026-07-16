@@ -204,9 +204,19 @@ main > h1 {
   gap: 1rem;
 }
 
-.member-container.grid-view {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
+.member-container.list-view {
+  grid-template-columns: 1fr;
+}
+
+.member-card {
+  position: relative;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .list-view .member-card {
@@ -226,18 +236,6 @@ main > h1 {
   width: 90px;
   height: 90px;
   flex-shrink: 0;
-}
-
-.member-card {
-  min-width: 0;
-  position: relative;
-  background-color: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
 }
 
 .member-info {
@@ -347,6 +345,192 @@ a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--danfo-yellow);
   outline-offset: 2px;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.hero-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: relative;
+  margin-top: -70px;
+  background-color: var(--danfo-black);
+  color: #FFFFFF;
+  padding: 1.25rem 1rem 1.5rem;
+  max-width: 90%;
+  margin-left: 1rem;
+  border-left: 6px solid var(--danfo-yellow);
+}
+
+.hero-overlay h1 {
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-overlay p {
+  color: #E8E5DD;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: var(--danfo-yellow);
+  color: var(--danfo-black);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius);
+}
+
+.cta-btn:hover,
+.cta-btn:focus-visible {
+  background-color: #FFFFFF;
+}
+
+/* ---------- Events ---------- */
+
+.events {
+  margin-bottom: 2.5rem;
+}
+
+.events h2, .weather h2, .spotlights h2 {
+  border-left: 4px solid var(--lagoon);
+  padding-left: 0.6rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.events-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.event-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.event-date {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--lagoon);
+  margin-bottom: 0.3rem;
+}
+
+.event-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* ---------- Weather ---------- */
+
+.weather {
+  margin-bottom: 2.5rem;
+}
+
+.weather-panel {
+  background-color: var(--danfo-black);
+  color: #FFFFFF;
+  border-radius: var(--radius);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.weather-current {
+  text-align: center;
+}
+
+.current-temp {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--danfo-yellow);
+}
+
+.current-desc {
+  font-size: 0.9rem;
+  color: #E8E5DD;
+}
+
+.forecast-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}
+
+.forecast-list li {
+  flex: 1;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.forecast-day {
+  color: #B7C4CC;
+}
+
+.forecast-temp {
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+/* ---------- Spotlights ---------- */
+
+.spotlights {
+  margin-bottom: 2.5rem;
+}
+
+.spotlight-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.spotlight-card {
+  position: relative;
+  min-width: 0;
+  background-color: var(--card-bg);
+  border: 2px solid var(--danfo-yellow);
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.spotlight-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.spotlight-info .member-name {
+  margin-top: 0.25rem;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="Lagos skyline at dusk over the lagoon">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2C3E66"/>
+      <stop offset="100%" stop-color="#0B4F6C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="500" fill="url(#sky)"/>
+  <circle cx="980" cy="120" r="70" fill="#FFC72C" opacity="0.9"/>
+  <g fill="#171717">
+    <rect x="60" y="260" width="60" height="240"/>
+    <rect x="140" y="200" width="50" height="300"/>
+    <rect x="210" y="300" width="70" height="200"/>
+    <rect x="300" y="180" width="45" height="320"/>
+    <rect x="365" y="240" width="65" height="260"/>
+    <rect x="450" y="140" width="55" height="360"/>
+    <rect x="525" y="220" width="60" height="280"/>
+    <rect x="605" y="260" width="50" height="240"/>
+    <rect x="675" y="190" width="65" height="310"/>
+    <rect x="760" y="230" width="55" height="270"/>
+    <rect x="835" y="160" width="60" height="340"/>
+    <rect x="915" y="280" width="50" height="220"/>
+    <rect x="985" y="240" width="60" height="260"/>
+    <rect x="1065" y="200" width="50" height="300"/>
+  </g>
+  <rect y="470" width="1200" height="30" fill="#0B4F6C"/>
+</svg>

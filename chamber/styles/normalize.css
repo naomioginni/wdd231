@@ -12,16 +12,11 @@ html {
   text-size-adjust: 100%;
 }
 
-body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+h3, h4, p, figure, blockquote, dl, dd {
   margin: 0;
 }
 
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-}
-
-img, picture, svg, video {
+picture, svg, video {
   display: block;
   max-width: 100%;
 }

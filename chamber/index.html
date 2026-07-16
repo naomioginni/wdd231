@@ -1,11 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Chamber of Commerce, Coming Soon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lagos Chamber of Commerce | Home</title>
+  <meta name="description" content="Home page of the Lagos Chamber of Commerce, connecting and championing businesses across Lagos.">
+  <meta name="author" content="Naomi Oginni">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Lagos Chamber of Commerce">
+  <meta property="og:description" content="Connecting and championing businesses across Lagos, from Lagos Island to Lekki, Yaba, and beyond.">
+  <meta property="og:image" content="https://naomioginni.github.io/wdd231/chamber/images/og-directory.webp">
+  <meta property="og:url" content="https://naomioginni.github.io/wdd231/chamber/index.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Work+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlights.js" defer></script>
 </head>
 <body>
-  <h1>Chamber of Commerce project, coming in Week 2</h1>
-  <a href="../index.html">Back to Home</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="images/favicon.svg" alt="" class="logo" width="36" height="36">
+        <span class="site-name">Lagos Chamber<br><small>of Commerce</small></span>
+      </a>
+      <button id="menuToggle" class="hamburger" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav id="primaryNav" class="primary-nav">
+        <ul>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <img src="images/hero-lagos.svg" alt="Lagos skyline over the lagoon at dusk" class="hero-image">
+      <div class="hero-overlay">
+        <h1>Lagos Chamber of Commerce</h1>
+        <p>Connecting and championing businesses across Lagos &mdash; from Lagos Island to Lekki, Yaba, and beyond.</p>
+        <a href="join.html" class="cta-btn">Join the Chamber</a>
+      </div>
+    </section>
+
+    <section class="events" aria-labelledby="events-heading">
+      <h2 id="events-heading">Current Events</h2>
+      <ul class="events-list">
+        <li class="event-card">
+          <p class="event-date">Aug 14, 2026</p>
+          <h3 class="event-title">Lagos Business Mixer</h3>
+          <p>Network with fellow chamber members over small chops and live music at the Marina waterfront.</p>
+        </li>
+        <li class="event-card">
+          <p class="event-date">Sep 3, 2026</p>
+          <h3 class="event-title">SME Growth Workshop</h3>
+          <p>A half-day workshop on scaling small businesses, led by Lagos-based founders and financial advisors.</p>
+        </li>
+        <li class="event-card">
+          <p class="event-date">Oct 21, 2026</p>
+          <h3 class="event-title">Chamber Trade Expo</h3>
+          <p>Member businesses showcase products and services to the wider Lagos business community.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="weather" aria-labelledby="weather-heading">
+      <h2 id="weather-heading">Lagos Weather</h2>
+      <div class="weather-panel">
+        <div class="weather-current">
+          <p id="currentTemp" class="current-temp">&mdash;</p>
+          <p id="currentDesc" class="current-desc">Loading weather&hellip;</p>
+        </div>
+        <ul id="forecastList" class="forecast-list" aria-label="3-day temperature forecast">
+          <li>Loading forecast&hellip;</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="spotlights" aria-labelledby="spotlights-heading">
+      <h2 id="spotlights-heading">Member Spotlights</h2>
+      <div id="spotlightContainer" class="spotlight-container">
+        <!-- Spotlight cards injected by scripts/spotlights.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <p class="footer-heading">Lagos Chamber of Commerce</p>
+        <address>
+          12 Marina Business District<br>
+          Lagos Island, Lagos, Nigeria
+        </address>
+        <p><a href="tel:+2348001234567">+234 800 123 4567</a></p>
+        <p><a href="mailto:info@lagoschamber.com">info@lagoschamber.com</a></p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Site Info</p>
+        <p>Naomi Oginni</p>
+        <p>WDD 231 &mdash; Web Frontend Development I</p>
+        <p id="lastModified"></p>
+        <p>&copy; <span id="currentYear"></span> Lagos Chamber of Commerce</p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
