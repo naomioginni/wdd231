@@ -13,6 +13,11 @@
   --card-bg: #FFFFFF;
   --text-soft: #55524C;
   --border: #E2DACB;
+  --white: #FFFFFF;
+  --footer-text: #E8E5DD;
+  --divider-dark: #333333;
+  --tier-2-bg: #D9D9D9;
+  --forecast-day: #B7C4CC;
 
   --font-display: 'Poppins', 'Segoe UI', sans-serif;
   --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -77,7 +82,7 @@ h1, h2 {
 .site-name {
   font-family: var(--font-display);
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--white);
   font-size: 0.95rem;
   line-height: 1.2;
 }
@@ -133,12 +138,12 @@ h1, h2 {
 
 .primary-nav a {
   display: block;
-  color: #FFFFFF;
+  color: var(--white);
   padding: 0.75rem 0.25rem;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 0.9rem;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--divider-dark);
 }
 
 .primary-nav a.active,
@@ -294,7 +299,7 @@ main > h1 {
 }
 
 .member-badge.tier-2 {
-  background-color: #D9D9D9;
+  background-color: var(--tier-2-bg);
 }
 
 .member-badge.tier-1 {
@@ -305,7 +310,7 @@ main > h1 {
 
 .site-footer {
   background-color: var(--danfo-black);
-  color: #E8E5DD;
+  color: var(--footer-text);
   border-top: 6px solid var(--danfo-yellow);
 }
 
@@ -333,7 +338,7 @@ main > h1 {
 }
 
 .footer-col a {
-  color: #E8E5DD;
+  color: var(--footer-text);
 }
 
 .footer-col a:hover,
@@ -364,7 +369,7 @@ button:focus-visible {
   position: relative;
   margin-top: -70px;
   background-color: var(--danfo-black);
-  color: #FFFFFF;
+  color: var(--white);
   padding: 1.25rem 1rem 1.5rem;
   max-width: 90%;
   margin-left: 1rem;
@@ -372,13 +377,13 @@ button:focus-visible {
 }
 
 .hero-overlay h1 {
-  color: #FFFFFF;
+  color: var(--white);
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
 }
 
 .hero-overlay p {
-  color: #E8E5DD;
+  color: var(--footer-text);
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
@@ -396,7 +401,7 @@ button:focus-visible {
 
 .cta-btn:hover,
 .cta-btn:focus-visible {
-  background-color: #FFFFFF;
+  background-color: var(--white);
 }
 
 /* ---------- Events ---------- */
@@ -447,7 +452,7 @@ button:focus-visible {
 
 .weather-panel {
   background-color: var(--danfo-black);
-  color: #FFFFFF;
+  color: var(--white);
   border-radius: var(--radius);
   padding: 1.25rem 1rem;
   display: flex;
@@ -468,14 +473,14 @@ button:focus-visible {
 
 .current-desc {
   font-size: 0.9rem;
-  color: #E8E5DD;
+  color: var(--footer-text);
 }
 
 .forecast-list {
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--divider-dark);
   padding-top: 1rem;
 }
 
@@ -490,12 +495,12 @@ button:focus-visible {
 }
 
 .forecast-day {
-  color: #B7C4CC;
+  color: var(--forecast-day);
 }
 
 .forecast-temp {
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--white);
 }
 
 /* ---------- Spotlights ---------- */
