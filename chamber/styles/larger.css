@@ -21,7 +21,6 @@
     position: static;
     max-height: none;
     overflow: visible;
-    background-color: transparent;
   }
 
   .primary-nav ul {
