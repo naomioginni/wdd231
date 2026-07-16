@@ -64,6 +64,34 @@ h1, h2, .site-name, .primary-nav a, .member-name, .footer-heading, .cta-btn, .ev
   margin-bottom: 1rem;
 }
 
+/* Shared Grids */
+.member-container, .footer-inner, .events-list, .spotlight-container {
+  display: grid;
+}
+
+.member-container, .member-container.list-view, .events-list, .spotlight-container {
+  grid-template-columns: 1fr;
+}
+
+/* Shared Position Relative */
+.header-inner, .member-card, .hero, .hero-overlay, .spotlight-card {
+  position: relative;
+}
+
+/* Shared Position Absolute */
+.visually-hidden, .primary-nav, .member-badge {
+  position: absolute;
+}
+
+/* Shared Image Styling */
+.member-card img, .hero-image, .spotlight-card img {
+  object-fit: cover;
+}
+
+/* =========================================================
+   Base Styles & Components
+   ========================================================= */
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -84,7 +112,6 @@ h1, h2 {
 }
 
 .visually-hidden {
-  position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
@@ -106,7 +133,6 @@ h1, h2 {
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1rem;
-  position: relative;
 }
 
 .logo-link {
@@ -148,7 +174,6 @@ h1, h2 {
 }
 
 .primary-nav {
-  position: absolute;
   top: 100%;
   left: 0;
   right: 0;
@@ -230,17 +255,10 @@ main > h1 {
 /* ---------- Member container ---------- */
 
 .member-container {
-  display: grid;
-  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-.member-container.list-view {
-  grid-template-columns: 1fr;
-}
-
 .member-card {
-  position: relative;
   border: 1px solid var(--border);
   padding: 1rem;
   gap: 0.5rem;
@@ -255,7 +273,6 @@ main > h1 {
 .member-card img {
   width: 100%;
   height: 140px;
-  object-fit: cover;
 }
 
 .list-view .member-card img {
@@ -298,7 +315,6 @@ main > h1 {
 
 /* Signature element: danfo route-plate membership badge */
 .member-badge {
-  position: absolute;
   top: 0.75rem;
   right: 0.75rem;
   font-weight: 700;
@@ -335,7 +351,6 @@ main > h1 {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 1.5rem 1rem;
-  display: grid;
   gap: 1.5rem;
 }
 
@@ -371,18 +386,15 @@ button:focus-visible {
 /* ---------- Hero ---------- */
 
 .hero {
-  position: relative;
   margin-bottom: 2.5rem;
 }
 
 .hero-image {
   width: 100%;
   height: 260px;
-  object-fit: cover;
 }
 
 .hero-overlay {
-  position: relative;
   margin-top: -70px;
   background-color: var(--danfo-black);
   color: var(--white);
@@ -425,8 +437,6 @@ button:focus-visible {
 }
 
 .events-list {
-  display: grid;
-  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
@@ -506,13 +516,10 @@ button:focus-visible {
 }
 
 .spotlight-container {
-  display: grid;
-  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
 .spotlight-card {
-  position: relative;
   min-width: 0;
   border: 2px solid var(--danfo-yellow);
   padding: 1rem;
@@ -522,7 +529,6 @@ button:focus-visible {
 .spotlight-card img {
   width: 100%;
   height: 120px;
-  object-fit: cover;
 }
 
 .spotlight-info .member-name {
