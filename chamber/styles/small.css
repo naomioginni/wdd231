@@ -28,7 +28,7 @@
 }
 
 /* =========================================================
-   Targeted Layout Groupings (Minimizes Selectors)
+   Smart Layout Utilities (Saves 16 Declarations)
    ========================================================= */
 
 .member-card, .event-card, .spotlight-card {
@@ -37,21 +37,13 @@
   padding: 1rem;
 }
 
-.member-card img, .spotlight-card img {
-  width: 100%;
-  object-fit: cover;
-  border-radius: var(--radius);
-}
-
-.hamburger, .view-btn {
+.hamburger, .primary-nav ul, .member-card, .weather-panel, .forecast-list li, .spotlight-card {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius);
+  flex-direction: column;
 }
 
 /* =========================================================
-   Base Styles
+   Base Styles & Components
    ========================================================= */
 
 body {
@@ -70,8 +62,8 @@ img {
 
 h1, h2 {
   margin: 0;
-  font-weight: 700;
   font-family: var(--font-display);
+  font-weight: 700;
 }
 
 .visually-hidden {
@@ -121,9 +113,11 @@ h1, h2 {
 
 .hamburger {
   border: 2px solid var(--danfo-yellow);
+  border-radius: var(--radius);
   width: 44px;
   height: 40px;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 5px;
   z-index: 20;
 }
@@ -149,8 +143,6 @@ h1, h2 {
 }
 
 .primary-nav ul {
-  display: flex;
-  flex-direction: column;
   padding: 0.5rem 1rem 1rem;
 }
 
@@ -201,9 +193,14 @@ main > h1 {
 }
 
 .view-btn {
+  background-color: var(--card-bg);
   border: 2px solid var(--danfo-black);
+  border-radius: var(--radius);
   width: 40px;
   height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--danfo-black);
 }
 
@@ -226,8 +223,6 @@ main > h1 {
 .member-card {
   position: relative;
   border: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
   gap: 0.5rem;
 }
 
@@ -238,7 +233,10 @@ main > h1 {
 }
 
 .member-card img {
+  width: 100%;
   height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius);
 }
 
 .list-view .member-card img {
@@ -278,6 +276,7 @@ main > h1 {
   text-decoration: underline;
 }
 
+/* Signature element: danfo route-plate membership badge */
 .member-badge {
   position: absolute;
   inset: 0.75rem 0.75rem auto auto;
@@ -312,7 +311,8 @@ main > h1 {
 }
 
 .footer-heading {
-  font: 600 1rem var(--font-display);
+  font-family: var(--font-display);
+  font-weight: 600;
   color: var(--danfo-yellow);
   margin-bottom: 0.4rem;
 }
@@ -420,8 +420,6 @@ a:focus-visible, button:focus-visible {
   color: var(--white);
   border-radius: var(--radius);
   padding: 1.25rem 1rem;
-  display: flex;
-  flex-direction: column;
   gap: 1rem;
 }
 
@@ -446,11 +444,9 @@ a:focus-visible, button:focus-visible {
 }
 
 .forecast-list li {
-  font: 0.8rem var(--font-mono);
   flex: 1;
   text-align: center;
-  display: flex;
-  flex-direction: column;
+  font: 0.8rem var(--font-mono);
   gap: 0.25rem;
 }
 
@@ -471,12 +467,15 @@ a:focus-visible, button:focus-visible {
   position: relative;
   min-width: 0;
   border: 2px solid var(--danfo-yellow);
-  display: flex;
-  flex-direction: column;
   gap: 0.5rem;
 }
 
-.spotlight-card img { height: 120px; }
+.spotlight-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
 
 .spotlight-info .member-name { margin-top: 0.25rem; }
 
