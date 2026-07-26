@@ -18,6 +18,8 @@
   --divider-dark: #333333;
   --tier-2-bg: #D9D9D9;
   --forecast-day: #B7C4CC;
+  --bronze: #B08D57;
+  --backdrop: rgba(23, 23, 23, 0.6);
 
   --font-display: 'Poppins', 'Segoe UI', sans-serif;
   --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -26,33 +28,6 @@
   --radius: 4px;
   --max-width: 1100px;
 }
-
-/* =========================================================
-   Targeted Layout Groupings (Minimizes Selectors)
-   ========================================================= */
-
-.member-card, .event-card, .spotlight-card {
-  background-color: var(--card-bg);
-  border-radius: var(--radius);
-  padding: 1rem;
-}
-
-.member-card img, .spotlight-card img {
-  width: 100%;
-  object-fit: cover;
-  border-radius: var(--radius);
-}
-
-.hamburger, .view-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius);
-}
-
-/* =========================================================
-   Base Styles
-   ========================================================= */
 
 body {
   margin: 0;
@@ -70,8 +45,8 @@ img {
 
 h1, h2 {
   margin: 0;
-  font-weight: 700;
   font-family: var(--font-display);
+  font-weight: 700;
 }
 
 .visually-hidden {
@@ -107,8 +82,11 @@ h1, h2 {
 }
 
 .site-name {
-  font: 700 0.95rem/1.2 var(--font-display);
+  font-family: var(--font-display);
+  font-weight: 700;
   color: var(--white);
+  font-size: 0.95rem;
+  line-height: 1.2;
 }
 
 .site-name small {
@@ -121,9 +99,13 @@ h1, h2 {
 
 .hamburger {
   border: 2px solid var(--danfo-yellow);
+  border-radius: var(--radius);
   width: 44px;
   height: 40px;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 5px;
   z-index: 20;
 }
@@ -137,7 +119,9 @@ h1, h2 {
 
 .primary-nav {
   position: absolute;
-  inset: 100% 0 auto 0;
+  top: 100%;
+  left: 0;
+  right: 0;
   background-color: var(--danfo-black);
   max-height: 0;
   overflow: hidden;
@@ -158,7 +142,9 @@ h1, h2 {
   display: block;
   color: var(--white);
   padding: 0.75rem 0.25rem;
-  font: 600 0.9rem var(--font-display);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
   border-bottom: 1px solid var(--divider-dark);
 }
 
@@ -191,7 +177,8 @@ main > h1 {
 }
 
 .member-count {
-  font: 0.85rem var(--font-mono);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
   color: var(--text-soft);
 }
 
@@ -201,9 +188,14 @@ main > h1 {
 }
 
 .view-btn {
+  background-color: var(--card-bg);
   border: 2px solid var(--danfo-black);
+  border-radius: var(--radius);
   width: 40px;
   height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--danfo-black);
 }
 
@@ -225,7 +217,10 @@ main > h1 {
 
 .member-card {
   position: relative;
+  background-color: var(--card-bg);
   border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -238,7 +233,10 @@ main > h1 {
 }
 
 .member-card img {
+  width: 100%;
   height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius);
 }
 
 .list-view .member-card img {
@@ -252,7 +250,9 @@ main > h1 {
 }
 
 .member-name {
-  font: 600 1.05rem var(--font-display);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
   margin: 0 0 0.15rem;
 }
 
@@ -264,7 +264,8 @@ main > h1 {
 }
 
 .member-detail {
-  font: 0.78rem var(--font-mono);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
   color: var(--text-soft);
   margin: 0.1rem 0;
 }
@@ -278,10 +279,14 @@ main > h1 {
   text-decoration: underline;
 }
 
+/* Signature element: danfo route-plate membership badge */
 .member-badge {
   position: absolute;
-  inset: 0.75rem 0.75rem auto auto;
-  font: 700 0.68rem var(--font-mono);
+  top: 0.75rem;
+  right: 0.75rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.68rem;
   letter-spacing: 0.04em;
   color: var(--danfo-black);
   background-color: var(--sand);
@@ -291,9 +296,17 @@ main > h1 {
   text-transform: uppercase;
 }
 
-.member-badge.tier-3 { background-color: var(--danfo-yellow); }
-.member-badge.tier-2 { background-color: var(--tier-2-bg); }
-.member-badge.tier-1 { background-color: var(--sand); }
+.member-badge.tier-3 {
+  background-color: var(--danfo-yellow);
+}
+
+.member-badge.tier-2 {
+  background-color: var(--tier-2-bg);
+}
+
+.member-badge.tier-1 {
+  background-color: var(--sand);
+}
 
 /* ---------- Footer ---------- */
 
@@ -312,7 +325,8 @@ main > h1 {
 }
 
 .footer-heading {
-  font: 600 1rem var(--font-display);
+  font-family: var(--font-display);
+  font-weight: 600;
   color: var(--danfo-yellow);
   margin-bottom: 0.4rem;
 }
@@ -325,10 +339,17 @@ main > h1 {
   margin: 0.1rem 0;
 }
 
-.footer-col a { color: var(--footer-text); }
-.footer-col a:hover, .footer-col a:focus-visible { color: var(--danfo-yellow); }
+.footer-col a {
+  color: var(--footer-text);
+}
 
-a:focus-visible, button:focus-visible {
+.footer-col a:hover,
+.footer-col a:focus-visible {
+  color: var(--danfo-yellow);
+}
+
+a:focus-visible,
+button:focus-visible {
   outline: 3px solid var(--danfo-yellow);
   outline-offset: 2px;
 }
@@ -348,11 +369,12 @@ a:focus-visible, button:focus-visible {
 
 .hero-overlay {
   position: relative;
-  margin: -70px 0 0 1rem;
+  margin-top: -70px;
   background-color: var(--danfo-black);
   color: var(--white);
   padding: 1.25rem 1rem 1.5rem;
   max-width: 90%;
+  margin-left: 1rem;
   border-left: 6px solid var(--danfo-yellow);
 }
 
@@ -372,16 +394,23 @@ a:focus-visible, button:focus-visible {
   display: inline-block;
   background-color: var(--danfo-yellow);
   color: var(--danfo-black);
-  font: 700 0.9rem var(--font-display);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
   padding: 0.65rem 1.25rem;
   border-radius: var(--radius);
 }
 
-.cta-btn:hover, .cta-btn:focus-visible { background-color: var(--white); }
+.cta-btn:hover,
+.cta-btn:focus-visible {
+  background-color: var(--white);
+}
 
 /* ---------- Events ---------- */
 
-.events { margin-bottom: 2.5rem; }
+.events {
+  margin-bottom: 2.5rem;
+}
 
 .events h2, .weather h2, .spotlights h2 {
   border-left: 4px solid var(--lagoon);
@@ -397,23 +426,31 @@ a:focus-visible, button:focus-visible {
 }
 
 .event-card {
+  background-color: var(--card-bg);
   border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
 }
 
 .event-date {
-  font: 0.75rem var(--font-mono);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
   color: var(--lagoon);
   margin-bottom: 0.3rem;
 }
 
 .event-title {
-  font: 600 1rem var(--font-display);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
   margin-bottom: 0.3rem;
 }
 
 /* ---------- Weather ---------- */
 
-.weather { margin-bottom: 2.5rem; }
+.weather {
+  margin-bottom: 2.5rem;
+}
 
 .weather-panel {
   background-color: var(--danfo-black);
@@ -425,10 +462,14 @@ a:focus-visible, button:focus-visible {
   gap: 1rem;
 }
 
-.weather-current { text-align: center; }
+.weather-current {
+  text-align: center;
+}
 
 .current-temp {
-  font: 700 2.5rem var(--font-display);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.5rem;
   color: var(--danfo-yellow);
 }
 
@@ -446,20 +487,29 @@ a:focus-visible, button:focus-visible {
 }
 
 .forecast-list li {
-  font: 0.8rem var(--font-mono);
   flex: 1;
   text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.forecast-day { color: var(--forecast-day); }
-.forecast-temp { font-weight: 600; color: var(--white); }
+.forecast-day {
+  color: var(--forecast-day);
+}
+
+.forecast-temp {
+  font-weight: 600;
+  color: var(--white);
+}
 
 /* ---------- Spotlights ---------- */
 
-.spotlights { margin-bottom: 2.5rem; }
+.spotlights {
+  margin-bottom: 2.5rem;
+}
 
 .spotlight-container {
   display: grid;
@@ -470,16 +520,228 @@ a:focus-visible, button:focus-visible {
 .spotlight-card {
   position: relative;
   min-width: 0;
+  background-color: var(--card-bg);
   border: 2px solid var(--danfo-yellow);
+  border-radius: var(--radius);
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.spotlight-card img { height: 120px; }
+.spotlight-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
 
-.spotlight-info .member-name { margin-top: 0.25rem; }
+.spotlight-info .member-name {
+  margin-top: 0.25rem;
+}
+
+/* ---------- Join page ---------- */
+
+.join-intro {
+  color: var(--text-soft);
+  max-width: 65ch;
+  margin-bottom: 1.5rem;
+}
+
+.join-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.join-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.95rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--white);
+  color: var(--danfo-black);
+}
+
+.join-form input:focus-visible,
+.join-form select:focus-visible,
+.join-form textarea:focus-visible {
+  outline: 3px solid var(--danfo-yellow);
+  outline-offset: 1px;
+}
+
+.join-form textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.submit-btn {
+  border: none;
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+/* CTA button (shared with hero) */
+.cta-btn {
+  display: inline-block;
+  background-color: var(--danfo-yellow);
+  color: var(--danfo-black);
+  font-family: var(--font-display);
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Membership tier cards */
+.membership-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.tier-card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--danfo-black);
+  border-radius: var(--radius);
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: cardEntrance 0.5s ease forwards;
+}
+
+.tier-card:nth-child(1) { animation-delay: 0s; border-top: 6px solid var(--text-soft); }
+.tier-card:nth-child(2) { animation-delay: 0.15s; border-top: 6px solid var(--bronze); }
+.tier-card:nth-child(3) { animation-delay: 0.3s; border-top: 6px solid var(--tier-2-bg); }
+.tier-card:nth-child(4) { animation-delay: 0.45s; border-top: 6px solid var(--danfo-yellow); }
+
+@keyframes cardEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tier-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.tier-price {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--lagoon);
+  margin-bottom: 0.5rem;
+}
+
+.modal-link {
+  margin-top: 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--indigo);
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Modals (native <dialog>) */
+.tier-modal {
+  border: 3px solid var(--danfo-black);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  max-width: 420px;
+  width: 90vw;
+}
+
+.tier-modal::backdrop {
+  background-color: var(--backdrop);
+}
+
+.tier-modal h2 {
+  margin-bottom: 0.75rem;
+}
+
+.tier-modal ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.1rem;
+  list-style: disc;
+}
+
+.modal-close {
+  background-color: var(--danfo-black);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5rem 1.1rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+/* Thank-you page */
+.application-summary {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.application-summary dt {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--lagoon);
+  margin-top: 0.75rem;
+}
+
+.application-summary dt:first-child {
+  margin-top: 0;
+}
+
+.application-summary dd {
+  margin: 0.15rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; }
+  * {
+    transition: none !important;
+  }
+
+  .tier-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
