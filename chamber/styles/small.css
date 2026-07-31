@@ -723,6 +723,100 @@ button:focus-visible {
   font-size: 0.9rem;
 }
 
+.discover-intro {
+  color: var(--text-soft);
+  max-width: 65ch;
+  margin-bottom: 1.5rem;
+}
+
+/* Small screens (320px–640px): single-column stack, one named area per row */
+.discover-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "item1"
+    "item2"
+    "item3"
+    "item4"
+    "item5"
+    "item6"
+    "item7"
+    "item8";
+  margin-bottom: 2.5rem;
+}
+
+.discover-card {
+  min-width: 0;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.item1 { grid-area: item1; }
+.item2 { grid-area: item2; }
+.item3 { grid-area: item3; }
+.item4 { grid-area: item4; }
+.item5 { grid-area: item5; }
+.item6 { grid-area: item6; }
+.item7 { grid-area: item7; }
+.item8 { grid-area: item8; }
+
+.discover-card h2 {
+  font-size: 1.1rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.discover-card figure {
+  margin: 0;
+}
+
+.discover-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.discover-card address {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-style: normal;
+  color: var(--lagoon);
+}
+
+.discover-card p {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  flex: 1;
+}
+
+.learn-more-btn {
+  align-self: flex-start;
+  background-color: var(--danfo-yellow);
+  color: var(--danfo-black);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+}
+
+.learn-more-btn:hover,
+.learn-more-btn:focus-visible {
+  background-color: var(--danfo-black);
+  color: var(--white);
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;

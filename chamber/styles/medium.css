@@ -1,0 +1,61 @@
+/* =========================================================
+   medium.css — medium-screen overrides (641px–1024px)
+   Used by the Discover page for its named grid-area layout.
+   ========================================================= */
+
+/* Image hover effect — applies from medium screens up only,
+   never on the small/mobile breakpoint. */
+@media screen and (min-width: 641px) {
+  .discover-card img {
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+
+  .discover-card:hover img,
+  .discover-card:focus-within img {
+    transform: scale(1.06);
+    filter: saturate(1.25);
+  }
+}
+
+/* Medium layout: 2 columns, with items 1 and 8 spanning full width
+   as "feature" rows — a genuinely different arrangement, not just
+   more columns of the same order. */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "item1 item1"
+      "item2 item3"
+      "item4 item5"
+      "item6 item7"
+      "item8 item8";
+    gap: 1.25rem;
+  }
+
+  .discover-card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .discover-card figure {
+    flex-shrink: 0;
+    width: 140px;
+  }
+
+  .discover-card img {
+    height: 110px;
+  }
+
+  .discover-card .learn-more-btn {
+    margin-top: auto;
+  }
+
+  .discover-card .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+    min-width: 0;
+  }
+}
