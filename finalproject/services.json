@@ -1,0 +1,138 @@
+[
+  {
+    "id": "business-cards",
+    "name": "Business Cards",
+    "category": "Print",
+    "priceRange": "$35 - $60 per 500",
+    "turnaround": "2-3 business days",
+    "description": "Premium card stock business cards, full-color on both sides, with optional matte, gloss, or foil finishes."
+  },
+  {
+    "id": "letterhead-envelopes",
+    "name": "Letterhead & Envelopes",
+    "category": "Print",
+    "priceRange": "$80 - $150 per 250",
+    "turnaround": "3-4 business days",
+    "description": "Branded letterhead and matching envelopes for invoices, letters, and professional correspondence."
+  },
+  {
+    "id": "brochures",
+    "name": "Tri-Fold Brochures",
+    "category": "Print",
+    "priceRange": "$120 - $220 per 250",
+    "turnaround": "3-5 business days",
+    "description": "Full-color tri-fold brochures for marketing collateral, service overviews, and event handouts."
+  },
+  {
+    "id": "flyers",
+    "name": "Flyers",
+    "category": "Print",
+    "priceRange": "$45 - $90 per 250",
+    "turnaround": "1-2 business days",
+    "description": "Single or double-sided flyers, ready fast for promotions, sales, and local events."
+  },
+  {
+    "id": "postcards",
+    "name": "Postcards",
+    "category": "Print",
+    "priceRange": "$50 - $95 per 500",
+    "turnaround": "2-3 business days",
+    "description": "Direct-mail-ready postcards with a glossy or matte finish, sized to standard mailing formats."
+  },
+  {
+    "id": "menus",
+    "name": "Menu Printing",
+    "category": "Print",
+    "priceRange": "$70 - $140 per 100",
+    "turnaround": "3-4 business days",
+    "description": "Laminated or matte menus sized for restaurants, cafes, and food trucks."
+  },
+  {
+    "id": "vinyl-banners",
+    "name": "Vinyl Banners",
+    "category": "Signage",
+    "priceRange": "$60 - $180 per banner",
+    "turnaround": "2-4 business days",
+    "description": "Weather-resistant, full-color vinyl banners for storefronts, grand openings, and events."
+  },
+  {
+    "id": "yard-signs",
+    "name": "Yard Signs",
+    "category": "Signage",
+    "priceRange": "$18 - $35 per sign",
+    "turnaround": "1-2 business days",
+    "description": "Corrugated plastic yard signs with an H-stake included, great for real estate and campaigns."
+  },
+  {
+    "id": "window-decals",
+    "name": "Window Decals",
+    "category": "Signage",
+    "priceRange": "$25 - $70 per decal",
+    "turnaround": "2-3 business days",
+    "description": "Custom die-cut vinyl decals for storefront windows, vehicles, and glass doors."
+  },
+  {
+    "id": "banner-stands",
+    "name": "Retractable Banner Stands",
+    "category": "Signage",
+    "priceRange": "$95 - $160 per stand",
+    "turnaround": "3-5 business days",
+    "description": "Portable roll-up banner stands, easy to transport and set up for trade shows and pop-ups."
+  },
+  {
+    "id": "tshirts",
+    "name": "Custom T-Shirts",
+    "category": "Apparel",
+    "priceRange": "$14 - $28 per shirt",
+    "turnaround": "5-7 business days",
+    "description": "Screen-printed or direct-to-garment custom t-shirts, minimum order of 12 shirts."
+  },
+  {
+    "id": "hats",
+    "name": "Embroidered Hats",
+    "category": "Apparel",
+    "priceRange": "$16 - $24 per hat",
+    "turnaround": "5-7 business days",
+    "description": "Custom embroidered logo caps, minimum order of 12 hats, multiple hat styles available."
+  },
+  {
+    "id": "tote-bags",
+    "name": "Tote Bags",
+    "category": "Apparel",
+    "priceRange": "$8 - $16 per bag",
+    "turnaround": "4-6 business days",
+    "description": "Branded canvas tote bags, a practical giveaway for events, conferences, and retail."
+  },
+  {
+    "id": "packaging-boxes",
+    "name": "Product Packaging Boxes",
+    "category": "Packaging",
+    "priceRange": "$1.50 - $4 per box",
+    "turnaround": "7-10 business days",
+    "description": "Custom-printed retail packaging boxes designed around your product and brand colors."
+  },
+  {
+    "id": "shipping-labels",
+    "name": "Shipping Labels",
+    "category": "Packaging",
+    "priceRange": "$0.10 - $0.30 per label",
+    "turnaround": "2-3 business days",
+    "description": "Branded shipping and product labels, available in roll or sheet format."
+  },
+  {
+    "id": "logo-design",
+    "name": "Logo Design",
+    "category": "Design",
+    "priceRange": "$150 - $400 flat rate",
+    "turnaround": "5-7 business days",
+    "description": "Custom logo design with three initial concepts and unlimited revisions on the chosen direction."
+  },
+  {
+    "id": "brand-guide",
+    "name": "Brand Style Guide",
+    "category": "Design",
+    "priceRange": "$200 - $350 flat rate",
+    "turnaround": "5-7 business days",
+    "description": "A complete brand guide covering color palette, typography, logo usage, and spacing rules."
+  }
+]
